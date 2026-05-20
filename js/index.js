@@ -19,7 +19,7 @@ $(document).ready(function()
 			$('#firstsection').empty();
 			$('#firstsection').append('<h1>Lara，真的非常抱歉，但是Edge浏览器不支持生日蛋糕的动画效果，我一时也找不到好的解决方案，请用FireFox查看这个网页，好吗？</h1>');
 			$('#firstsection').append('<p>不信你看</p>');
-			$('#firstsection').append("<img src='photo/截图.png' />");
+			$('#firstsection').append("<img src='1.jpg,2.jpg,3.jpg/截图.png' />");
 			
 		}
 		
