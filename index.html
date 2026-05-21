@@ -1,97 +1,78 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doğum Günün Kutlu Olsun Lara!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-            background-color: #fce4ec;
-        }
-        .main-container {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .card-section {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        h1 {
-            color: #d81b60;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        .gallery-img {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            border-radius: 10px;
-            margin: 15px 0;
-            object-fit: contain;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        audio {
-            width: 100%;
-            margin-top: 10px;
-        }
-        .footer-note {
-            font-size: 20px;
-            color: #d81b60;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Doğum Günün Kutlu Olsun!</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="main-container">
+    <div id="fullpage">
 
-        <div class="card-section">
-            <h1>Doğum Günün Kutlu Olsun! 🥳</h1>
-            <p>İyi ki doğdun, iyi ki benim hayatımdasın. Seninle geçen her an benim için çok özel.</p>
+        <div class="section">
+            <div class="text">
+                <h1>Doğum Günün Kutlu Olsun Lara! 🥳</h1>
+                <p>İyi ki doğdun, iyi ki varsın...</p>
+            </div>
         </div>
 
-        <div class="card-section">
-            <h1>Özetle İlerleyen Günlerdeee</h1>
-            <p>Mutluluk Hep Seninle Olsunnn</p>
-            <img src="photo/2.jpg" class="gallery-img" alt="Fotoğraf 1">
+        <div class="section">
+            <div class="text">
+                <h1>Seninle Geçen Her An Çok Özel</h1>
+                <p>Hayatımın en güzel detayısın.</p>
+            </div>
         </div>
 
-        <div class="card-section">
-            <h1>Gülmeyi De Eksik Etmeee</h1>
-            <img src="photo/3.jpg" class="gallery-img" alt="Fotoğraf 2">
+        <div class="section">
+            <div class="text">
+                <h1>Özetle İlerleyen Günlerdeee</h1>
+                <p>Mutluluk Hep Seninle Olsunnn</p>
+                <div style="text-align: center; width: 100%; margin-top: 20px;">
+                    <img src="photo/2.jpg" style="max-height: 40vh !important; width: auto !important; border-radius: 10px; display: block; margin: 0 auto; object-fit: contain;">
+                </div>
+            </div>
         </div>
 
-        <div class="card-section">
-            <h1>Her Şeyim</h1>
-            <img src="photo/IMG_20160305_183003.png" class="gallery-img" alt="Fotoğraf 3">
+        <div class="section">
+            <div class="text">
+                <h1>Gülmeyi De Eksik Etmeee</h1>
+                <div style="text-align: center; width: 100%; margin-top: 20px;">
+                    <img src="photo/3.jpg" style="max-height: 45vh !important; width: auto !important; border-radius: 10px; display: block; margin: 0 auto; object-fit: contain;">
+                </div>
+            </div>
         </div>
 
-        <div class="card-section">
-            <h1>İşte Bu Da Senin İçinnn 🎵</h1>
-            <audio id="song" src="song.m4a" controls="controls"></audio>
-            <div class="footer-note">Seni Çok Seviyorum! ❤️</div>
+        <div class="section">
+            <div class="text">
+                <h1>Her Şeyim</h1>
+                <div style="text-align: center; width: 100%; margin-top: 20px;">
+                    <img src="photo/IMG_20160305_183003.png" style="max-height: 45vh !important; width: auto !important; border-radius: 10px; display: block; margin: 0 auto; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h1>İşte Bu Da Senin İçinnn</h1>
+                <div style="text-align: center; width: 100%; margin-top: 20px;">
+                    <audio id="song" src="song.m4a" controls="controls" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;"></audio>
+                </div>
+            </div>
         </div>
 
     </div>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                navigation: true,
+                navigationPosition: 'right'
+            });
+        });
+    </script>
 </body>
 </html>
